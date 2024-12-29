@@ -26,11 +26,11 @@ cd <TaskFlow>
 
 ### 2. Create a `.env` File
 The `.env` file is where all your app settings go.
-- Copy the example file:
+
   ```bash
   cp .env.example .env
   ```
-- Open `.env` and update the database settings to use MySQL:
+ Open `.env` and update the database settings to use MySQL:
   ```plaintext
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
