@@ -10,6 +10,7 @@ Before you begin, make sure you have the following installed on your system:
 - [XAMPP](https://www.apachefriends.org/download.html) (or another PHP server)
 - PHP (8.2 or higher is recommended)
 - Composer (for managing PHP dependencies)
+- laravel install 10.0    (Filament works with laravel 10.0, but may not support laravel 11.0 yet)
 - Node.js and npm (for JavaScript dependencies)
 
 ---
@@ -69,11 +70,44 @@ Next, install all the libraries and tools the project needs:
   ```
 
 ### 5. Generate the App Key
-This key secures your app, so it’s a must-do step:
+- This key secures your app, so it’s a must-do step:
 ```bash
 php artisan key:generate
 ```
 
+### 6. Install Livewire
+- Livewire allows for reactive components in Laravel.
+
+```bash
+composer require livewire/livewire
+```
+### 7. Install Filament (Admin Panel)
+
+- Filament provides an admin panel for managing tasks.
+
+```bash
+composer require filament/filament
+```
+### 8. Publish the Filament assets:
+
+bash
+Copy code
+php artisan filament:install
+### 9. Install Laravel Breeze (Authentication Scaffolding)
+
+- Laravel Breeze will provide the basic authentication views and controllers.
+
+```bash
+
+composer require laravel/breeze --dev
+php artisan breeze:install
+npm install && npm run dev
+```
+- After installation, migrate the database to create necessary tables for authentication:
+
+```bash
+php artisan migrate
+```
 ### 6. Create a Database
 - Open the XAMPP control panel and start **MySQL** and **Apache**.
 - Go to [phpMyAdmin](http://localhost/phpmyadmin).
