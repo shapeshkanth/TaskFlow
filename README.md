@@ -19,8 +19,8 @@ Before you begin, make sure you have the following installed on your system:
 ### 1. Clone the Project
 Grab the project files from the repository:
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone <https://github.com/shapeshkanth/TaskFlow.git>
+cd <TaskFlow>
 ```
 
 ### 2. Create a `.env` File
@@ -34,7 +34,7 @@ The `.env` file is where all your app settings go.
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
   DB_PORT=3306
-  DB_DATABASE=Laravel
+  DB_DATABASE=task
   DB_USERNAME=root
   DB_PASSWORD=
   ```
